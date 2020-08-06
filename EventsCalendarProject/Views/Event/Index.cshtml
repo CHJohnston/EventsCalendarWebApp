@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Event>
+
+        <h2>What's Happening!! </h2>
+
+        <table class="table">
+            <tr>
+                <th>Event ID</th>
+                <th>Category ID</th>
+                <th>Name</th>
+                <th>State Date</th>
+                <th>End Date</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+
+        @foreach (var e in Model)
+        {
+        <tr>
+            <td><a href=/Event/ViewEvent/@e.EventID>@e.EventID</a></td>
+            <td>@e.CategoryID</td>
+            <td>@e.Name</td>
+            <td>@e.StartDate</td>
+            <td>@e.EndDate</td>
+            <td>@e.City</td>
+            <td>@e.State</td>
+        </tr>
+        }
+        </table>
+

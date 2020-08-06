@@ -1,0 +1,33 @@
+﻿@model Event
+
+<h2>What's Happening!! </h2>
+
+<table class="table">
+    <tr>
+        <th>Event ID</th>
+        <th>Category ID</th>
+        <th>Name</th>
+        <th>State Date</th>
+        <th>End Date</th>
+        <th>City</th>
+        <th>State</th>        
+    </tr>   
+    <tr>
+        <td>@Model.EventID</td>
+        <td>@Model.CategoryID</td>
+        <td>@Model.Name</td>
+        <td>@Model.StartDate</td>
+        <td>@Model.EndDate</td>
+        <td>@Model.City</td>
+        <td>@Model.State</td>       
+    </tr>    
+</table>
+
+<br />
+<hr />
+<br />
+
+<div style="display: block">
+    <p>@Model.Description</p>
+</div>
+
