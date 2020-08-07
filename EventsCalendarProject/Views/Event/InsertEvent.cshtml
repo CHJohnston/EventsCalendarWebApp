@@ -1,0 +1,55 @@
+﻿@model Event
+<h2>Create a New Event</h2>
+@using (Html.BeginForm("InsertEventToDatabase", "Event", "Post"))
+{
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="EventID" type="hidden" value="" />
+
+    <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="CategoryID" value="">
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat.CategoryID">@cat.CategoryID @cat.CategoryName</option>
+            }
+        </select>
+    </div>
+
+    <label asp-for="Name" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="" />
+
+    <label asp-for="StartDate" class="control-label">Start Date</label>
+    <input type="text" name="StartDate" class="form-control" value="" />
+
+    <label asp-for="StartTime" class="control-label">Start Time</label>
+    <input type="text" name="StartTime" class="form-control" value="" />
+
+    <label asp-for="EndDate" class="control-label">End Date</label>
+    <input type="text" name="EndDate" class="form-control" value="" />
+
+    <label asp-for="EndTime" class="control-label">End Time</label>
+    <input type="text" name="EndTime" class="form-control" value="" />
+
+    <label asp-for="Admission" class="control-label">Admission</label>
+    <input type="number" step="0.00" name="Admission" class="form-control" />
+
+    <label asp-for="Address" class="control-label">Address</label>
+    <input type="text" name="Address" class="form-control" value="" />
+
+    <label asp-for="City" class="control-label">City</label>
+    <input type="text" name="City" class="form-control" value="" />
+
+    <label asp-for="State" class="control-label">State</label>
+    <input type="text" name="State" class="form-control" value="" />
+
+    <label asp-for="Zip" class="control-label">Zip</label>
+    <input type="number" name="Zip" class="form-control" value="" />
+
+    <label asp-for="Description" class="control-label">Description</label>
+    <input type="text" name="Description" class="form-control" value="" />
+
+    <label asp-for="Website" class="control-label">Website</label>
+    <input type="text" name="Website" class="form-control" value="" />
+
+    <input type="submit" value="Create Event" class="btn btn-primary" />
+}

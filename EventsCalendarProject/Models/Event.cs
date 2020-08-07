@@ -22,5 +22,8 @@ namespace EventsCalendarProject.Models
         public string State { get; set; }
         public int Zip { get; set; }
         public string Description { get; set; }
+        public string Website { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
+
     }
 }

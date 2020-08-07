@@ -10,8 +10,8 @@
         <th>State Date</th>
         <th>End Date</th>
         <th>City</th>
-        <th>State</th>        
-    </tr>   
+        <th>State</th>
+    </tr>
     <tr>
         <td>@Model.EventID</td>
         <td>@Model.CategoryID</td>
@@ -19,8 +19,8 @@
         <td>@Model.StartDate</td>
         <td>@Model.EndDate</td>
         <td>@Model.City</td>
-        <td>@Model.State</td>       
-    </tr>    
+        <td>@Model.State</td>
+    </tr>
 </table>
 
 <br />
@@ -29,5 +29,25 @@
 
 <div style="display: block">
     <p>@Model.Description</p>
+</div>
+
+<br />
+
+<div style="display: block">
+    <a href=@Model.Website target="_blank">Visit Website</a>
+</div>
+
+<br/>
+
+<div style="display: block">
+    <a href="/Event/UpdateEvent/@Model.EventID">Update this Event</a>
+</div>
+
+<div style="display: block">
+    @using (Html.BeginForm("DeleteEvent", "Event", "Post"))
+    {
+        <input type="hidden" asp-for="EventID" value="@Model.EventID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this event" />
+    }
 </div>
 

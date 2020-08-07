@@ -9,5 +9,10 @@ namespace EventsCalendarProject.Models
     {
         public IEnumerable<Event> GetAllEvents();
         public Event GetEvent(int id);
+        public void InsertEvent(Event eventToInsert);
+        public IEnumerable<Category> GetCategories();
+        public Event AssignCategory();
+        public void DeleteEvent(Event e);
+        public void UpdateEvent(Event e);
     }
 }
