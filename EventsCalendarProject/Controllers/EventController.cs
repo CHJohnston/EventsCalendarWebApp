@@ -37,7 +37,7 @@ namespace EventsCalendarProject.Controllers
         public IActionResult UpdateEvent(int id)
         {
             Event evnt = repo.GetEvent(id);
-            var e = repo.AssignCategory();
+            repo.AssignCategoryUpdate(evnt);            
             repo.UpdateEvent(evnt);
 
             if (evnt == null)

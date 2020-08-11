@@ -23,7 +23,14 @@ namespace EventsCalendarProject.Models
             }
         }
 
-        public Event GetEvent(int id)
+        public IEnumerable<Event> GetAllEventsbyCategory(int id)
+        {
+            {
+                return _conn.Query<Event>("SELECT * FROM EVENTS WHERE CATEGORYID = @catid", new { catid = id});             //Regular Dapper                                                                                 
+            }
+        }
+
+public Event GetEvent(int id)
         {
               return _conn.QuerySingle<Event>("SELECT * FROM EVENTS WHERE EVENTID = @id", new { id = id });            
         }
@@ -60,6 +67,12 @@ namespace EventsCalendarProject.Models
             var e = new Event();
             e.Categories = categoryList;
             return e;
+        }
+
+        public void AssignCategoryUpdate(Event e)
+        {
+            var categoryList = GetCategories();            
+            e.Categories = categoryList;            
         }
 
         public void DeleteEvent(Event e)
