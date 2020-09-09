@@ -32,7 +32,7 @@ namespace EventsCalendarProject
                 return conn;
             });
 
-            //Anytime we add new table we need a new service, respecitve repositories -- Dependancy Injection
+            //Anytime we add new table we need a new service, respective repositories -- Dependency Injection
             services.AddTransient<IEventRepository, EventRepository>();            
             services.AddControllersWithViews();
         }

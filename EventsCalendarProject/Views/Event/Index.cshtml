@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Event>
+<!--View to Display All Events -->
 
         <h2>What's Happening!! </h2>
 
-        <table class="table">
+        <table class="table table-dark">
             <tr>
-                <th>Event ID</th>
-                <th>Category ID</th>
+                <th>Event ID</th>                
                 <th>Name</th>
-                <th>State Date</th>
+                <th>Start Date</th>
                 <th>End Date</th>
                 <th>City</th>
                 <th>State</th>
@@ -16,8 +16,7 @@
         @foreach (var e in Model)
         {
         <tr>
-            <td><a href=/Event/ViewEvent/@e.EventID>@e.EventID</a></td>
-            <td>@e.CategoryID</td>
+            <td><a href=/Event/ViewEvent/@e.EventID>@e.EventID</a></td>            
             <td>@e.Name</td>
             <td>@e.StartDate</td>
             <td>@e.EndDate</td>

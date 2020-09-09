@@ -7,8 +7,7 @@ namespace EventsCalendarProject.Models
 {
     public interface IEventRepository
     {
-        public IEnumerable<Event> GetAllEvents();
-        public IEnumerable<Event> GetAllEventsbyCategory(int catid);
+        public IEnumerable<Event> GetAllEvents();       
         public Event GetEvent(int id);
         public void InsertEvent(Event eventToInsert);
         public IEnumerable<Category> GetCategories();

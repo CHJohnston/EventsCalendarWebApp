@@ -7,7 +7,17 @@ body.PageBodyBackground {
     background-repeat: no-repeat;
     background-position: center;
 }
+/*Custom Styling for the jumbotron*/
+.jumbotron {
+    color: #d7d7d7;
+    background-color: rgba(42,42,43,.5);
+}
 
+/*Custom Styling for the event description block -- added overlay and padding */
+.event-description {
+    background-color: rgba(42,42,43,.5);
+    padding: 3%;
+}
 
 a.navbar-brand {
     white-space: normal;
@@ -79,9 +89,11 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #2a2a2d;
+    color: #d7d7d7;
 }

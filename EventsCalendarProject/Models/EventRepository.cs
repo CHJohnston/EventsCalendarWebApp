@@ -22,14 +22,7 @@ namespace EventsCalendarProject.Models
                 return _conn.Query<Event>("SELECT * FROM EVENTS;");             //Regular Dapper                                                                                 
             }
         }
-
-        public IEnumerable<Event> GetAllEventsbyCategory(int id)
-        {
-            {
-                return _conn.Query<Event>("SELECT * FROM EVENTS WHERE CATEGORYID = @catid", new { catid = id});             //Regular Dapper                                                                                 
-            }
-        }
-
+               
 public Event GetEvent(int id)
         {
               return _conn.QuerySingle<Event>("SELECT * FROM EVENTS WHERE EVENTID = @id", new { id = id });            
